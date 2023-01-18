@@ -1,4 +1,4 @@
-# NextITS ![NextITS logo](/assets/NextITS_logo.png){: style="height:100px;width:125px" align=right}
+# NextITS ![NextITS logo](/assets/NextITS_logo.webp){: style="width:125px" align=right}
 
 NextITS is an automated pipeline for metabarcoding fungi and other eukaryotes with full-length ITS sequenced with PacBio.
 

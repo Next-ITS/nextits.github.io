@@ -23,7 +23,7 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
   favicon: assets/favicon.ico
-  logo: assets/NextITS_logo.png
+  logo: assets/NextITS_logo.webp
   font:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
