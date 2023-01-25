@@ -83,6 +83,11 @@ export VERSION=3.9.8 && \
     If it is present on your system, you will need to load the module prior to running NextITS.  
     E.g., ```module load singularityce/3.9.1```  
 
+
+!!! note "Other container engines"
+     In the future, we plan to add support for the other container engines 
+     (e.g., `Docker`, `Podman`, `Shifter`, or `Charliecloud`) in NextITS.  
+
 ## Installation using `conda`
 
 It is possible to install the basic dependencies using [`conda`](https://docs.conda.io/en/latest/), 
