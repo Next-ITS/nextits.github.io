@@ -16,25 +16,23 @@ All pipeline dependencies were encapsulated in Singularity containers, which wil
 
 The following installation instruction is for Ubuntu.
 
-## Install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) 
+## Manual installation
+
+### [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) 
 
 Nextflow (`>=22.10.0`) requires Java 11 (or later, up to 18) to be installed.
 
-```{bash}
+``` bash
 sudo apt-get update
 sudo apt-get install default-jdk
 ```
 
 Install Nextflow:
 
-```{bash}
+```bash
 wget -qO- https://get.nextflow.io | bash
 chmod +x ./nextflow
 mkdir -p ~/bin & mv ./nextflow ~/bin/
 ```
 
-!!! note "Conda"
-    Alternatively, one can install Nextflow via [conda](https://docs.conda.io/en/latest/),
-    a package and environment management system.  
-    See [here](https://anaconda.org/bioconda/nextflow) for additional instructions.
 
