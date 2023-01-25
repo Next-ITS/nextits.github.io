@@ -36,3 +36,42 @@ mkdir -p ~/bin & mv ./nextflow ~/bin/
 ```
 
 
+### [`Singularity`](https://sylabs.io/docs/)
+
+To install Singularity on Debian-based systems (including Ubuntu), run:
+
+``` bash
+## Download dependencies
+sudo apt update && sudo apt install -y \
+    build-essential libssl-dev uuid-dev libgpgme11-dev libarchive-dev \
+    libseccomp-dev wget pkg-config git cryptsetup dh-autoreconf squashfs-tools
+
+## Download GO
+export VERSION=1.18.1 OS=linux ARCH=amd64 && \
+  wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz && \
+  sudo tar -C /usr/local -xzvf go$VERSION.$OS-$ARCH.tar.gz && \
+  rm go$VERSION.$OS-$ARCH.tar.gz
+
+echo 'export GOPATH=${HOME}/go' >> ~/.bashrc && \
+echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc && \
+source ~/.bashrc
+
+## Check Go installation
+go env
+
+## If conda points to wrong locations for Go, reassign environmental variables
+export GOTOOLDIR="/usr/local/go/pkg/tool/linux_amd64"
+export GOROOT="/usr/local/go"
+
+## Download singularity
+export VERSION=3.9.8 && \
+  wget https://github.com/sylabs/singularity/releases/download/v${VERSION}/singularity-ce-${VERSION}.tar.gz && \
+  tar -xzf singularity-ce-${VERSION}.tar.gz && \
+  cd singularity-ce-${VERSION}
+
+## Compile and install Singularity
+./mconfig && \
+  make -C builddir && \
+  sudo make -C builddir install
+
+```
