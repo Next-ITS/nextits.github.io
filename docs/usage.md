@@ -1,5 +1,5 @@
 ---
-title: Basic Usage
+title: Usage instructions
 description: >-
     NextITS pipeline usage examples.
 ---

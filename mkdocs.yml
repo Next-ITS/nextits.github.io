@@ -1,6 +1,6 @@
 site_name: NextITS
 
-site_author: Vladimir Mikryukov, Kessy Abarenkov
+site_author: Vladimir Mikryukov
 site_description: A pipeline for metabarcoding fungi and other eukaryotes with full-length ITS sequenced with PacBio.
 copyright: "Copyright © 2022 Vladimir Mikryukov. All rights reserved."
 
@@ -53,4 +53,4 @@ markdown_extensions:
 nav:
   - 'Introduction':         'index.md'
   - 'Installation':         'installation.md'
-  - 'Basic Usage':          'usage.md'
+  - 'Usage instructions':   'usage.md'
