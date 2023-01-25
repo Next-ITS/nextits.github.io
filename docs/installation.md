@@ -93,3 +93,20 @@ which is a reimplementation of the `conda` package manager in C++
 ``` bash
 mamba install -c bioconda nextflow
 ```
+
+If you do not have `conda` and `mamba`, they may be installed running the following commands:  
+
+``` bash
+## Install `miniconda`
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
+bash /tmp/miniconda.sh -b -p $HOME/miniconda
+~/miniconda/bin/conda init bash
+source ~/.bashrc
+rm /tmp/miniconda.sh
+
+## Install `mamba`
+conda install -c conda-forge mamba
+```
+
+!!! info "Conda"
+    For more details, see [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
