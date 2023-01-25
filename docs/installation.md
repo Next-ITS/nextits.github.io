@@ -83,3 +83,13 @@ export VERSION=3.9.8 && \
     If it is present on your system, you will need to load the module prior to running NextITS.  
     E.g., ```module load singularityce/3.9.1```  
 
+## Installation using `conda`
+
+It is possible to install the basic dependencies using [`conda`](https://docs.conda.io/en/latest/), 
+a package and environment management system. Here, we will use `mamba`, 
+which is a reimplementation of the `conda` package manager in C++ 
+(it has a much faster dependency solver).  
+
+``` bash
+mamba install -c bioconda nextflow
+```
