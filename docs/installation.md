@@ -75,3 +75,11 @@ export VERSION=3.9.8 && \
   sudo make -C builddir install
 
 ```
+
+!!! info "Singularity on HPC clusters"
+    If you are working on an HPC cluster, your IT team probably installed Singularity as a Linux Environment Module.  
+    You may check Singularity availability using  
+    ```module avail singularity```  
+    If it is present on your system, you will need to load the module prior to running NextITS.  
+    E.g., ```module load singularityce/3.9.1```  
+
