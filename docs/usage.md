@@ -8,7 +8,7 @@ description: >-
 
 ## Quick Start
 
-```
+``` bash
 nextflow run vmikk/NextITS -r main \
   -profile singularity \
   -resume \
