@@ -20,3 +20,9 @@ nextflow run vmikk/NextITS -r main \
   --blast_taxdb    "false" \
   --outdir         "Results"
 ```
+
+## Input data
+
+### Sequences
+
+For PacBio data, NextITS requires a single FASTQ file (`--input` argument) with multiplexed samples.  
