@@ -12,16 +12,17 @@ All pipeline dependencies were encapsulated in Singularity containers, which wil
 
 - [Java](https://www.oracle.com/java/technologies/downloads/)  
 - [Nextflow](https://www.nextflow.io/)  
-- [Singularity](https://docs.sylabs.io/guides/latest/user-guide/) container engine
+- [Singularity](https://docs.sylabs.io/guides/latest/user-guide/) or [Docker](https://www.docker.com/) container engine
 
-The following installation instruction is for Ubuntu.
 
 ## Manual installation
 
 ### [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) 
 
-Nextflow (`>=22.10.0`) requires Java 11 (or later, up to 18) to be installed.
+Nextflow (`>=22.10.0`) requires Java 11 (or later, up to 20) to be installed.
 
+To install Java, you may use your system's package manager.  
+If you're using Debian/Ubuntu, execute the following command:  
 ``` bash
 sudo apt-get update
 sudo apt-get install default-jdk
