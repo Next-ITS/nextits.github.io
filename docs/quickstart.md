@@ -81,3 +81,12 @@ nextflow run vmikk/NextITS -r main \
   --clustering_method "vsearch" \
   --otu_id 0.98
 ```
+
+!!! info "The other options"
+    Instead of using greedy clustering, you can opt for SWARM clustering, 
+    which employs a dynamic sequence similarity threshold 
+    that aligns with the natural limits of OTUs.  
+    Additionally, before clustering or as an alternative to it, 
+    you can denoise the data using the UNOISE algorithm.  
+    For more details, see the `Usage instructions`.
+
