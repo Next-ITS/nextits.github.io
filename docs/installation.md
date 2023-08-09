@@ -17,9 +17,7 @@ All pipeline dependencies were encapsulated in Singularity containers, which wil
 
 ## Manual installation
 
-### [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) 
-
-Nextflow (`>=22.10.0`) requires Java 11 (or later, up to 20) to be installed.
+[`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation)  (`>=22.10.0`) requires Java 11 (or later, up to 20) to be installed.
 
 To install Java, you may use your system's package manager.  
 If you're using Debian/Ubuntu, execute the following command:  
@@ -120,30 +118,30 @@ export VERSION=3.9.8 && \
     E.g., ```module load singularityce/3.9.1```  
 
 
-# Databases
+## Databases
 
 For ITS amplicons, you may use the following database for reference-based chimera removal:  
-[https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy](https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy). 
+[https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy](https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy).  
 This database originates from the most recent version of [UNITE](https://unite.ut.ee/index.php), version 9. 
 
-# Test
+## Test
 
-## Download the pipeline and test it on a minimal dataset with a single command
+### Download the pipeline and test it on a minimal dataset with a single command
 
 ``` bash
 nextflow run vmikk/nextits -r main -profile test
 ```
 
 
-# Singularity containers
+## Containers
 
-## Download container from the Singularity library
+### Download container from the Singularity library
 
 ``` bash
 singularity pull --arch amd64 library://vmiks/nextits/nextits:0-0-5
 ```
 
-## Build custom Singularity image
+### Build custom Singularity image
 
 ``` bash
 git clone https://github.com/vmikk/NextITS
@@ -151,7 +149,7 @@ sudo singularity build NextITS.sif ./NextITS/containerfiles/main_container.def
 ```
 
 
-# Other container engines
+### Other container engines
 
 !!! note "Other container engines"
      In the future, we plan to add support for the other container engines 
