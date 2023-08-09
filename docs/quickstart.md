@@ -74,10 +74,9 @@ Then, we can use a greedy algorithm to cluster the sequences, setting a similari
 nextflow run vmikk/NextITS -r main \
   -main-script Step2_AggregateRuns.nf \
   -resume \
-  -profile singularity \
-  --data_path "$(pwd)/Step1_Results/" \
+  -profile     singularity \
+  --data_path  "$(pwd)/Step1_Results/" \
   --outdir     "Step2_Results" \
-  -work-dir    "Step2_Results_wd" \
   --clustering_method "vsearch" \
   --otu_id 0.98
 ```
