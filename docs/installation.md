@@ -34,14 +34,45 @@ curl -s "https://get.sdkman.io" | bash
 sdk install java 17.0.6-amzn
 ```
 
+Then, install Nextflow:
+
 ```bash
 wget -qO- https://get.nextflow.io | bash
 chmod +x ./nextflow
 mkdir -p ~/bin & mv ./nextflow ~/bin/
 ```
 
+## Installation using `conda`
 
-### [`Singularity`](https://sylabs.io/docs/)
+It is possible to install the basic dependencies using [`conda`](https://docs.conda.io/en/latest/), 
+a package and environment management system. Here, we will use `mamba`, 
+which is a reimplementation of the `conda` package manager in C++ 
+(it has a much faster dependency solver).  
+
+``` bash
+mamba install -c bioconda nextflow
+```
+
+If you do not have `conda` and `mamba`, they may be installed running the following commands:  
+
+``` bash
+## Install `miniconda`
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
+bash /tmp/miniconda.sh -b -p $HOME/miniconda
+~/miniconda/bin/conda init bash
+source ~/.bashrc
+rm /tmp/miniconda.sh
+
+## Install `mamba`
+conda install -c conda-forge mamba
+```
+
+!!! info "Conda"
+    For more details, see [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
+
+
+
+## [`Singularity`](https://sylabs.io/docs/)
 
 To install Singularity on Debian-based systems (including Ubuntu), run:
 
@@ -89,34 +120,41 @@ export VERSION=3.9.8 && \
     E.g., ```module load singularityce/3.9.1```  
 
 
+# Databases
+
+For ITS amplicons, you may use the following database for reference-based chimera removal:  
+[https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy](https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy). 
+This database originates from the most recent version of [UNITE](https://unite.ut.ee/index.php), version 9. 
+
+# Test
+
+## Download the pipeline and test it on a minimal dataset with a single command
+
+``` bash
+nextflow run vmikk/nextits -r main -profile test
+```
+
+
+# Singularity containers
+
+## Download container from the Singularity library
+
+``` bash
+singularity pull --arch amd64 library://vmiks/nextits/nextits:0-0-5
+```
+
+## Build custom Singularity image
+
+``` bash
+git clone https://github.com/vmikk/NextITS
+sudo singularity build NextITS.sif ./NextITS/containerfiles/main_container.def
+```
+
+
+# Other container engines
+
 !!! note "Other container engines"
      In the future, we plan to add support for the other container engines 
-     (e.g., `Docker`, `Podman`, `Shifter`, or `Charliecloud`) in NextITS.  
+     (e.g., `Podman`, `Shifter`, or `Charliecloud`) in NextITS.  
 
-## Installation using `conda`
 
-It is possible to install the basic dependencies using [`conda`](https://docs.conda.io/en/latest/), 
-a package and environment management system. Here, we will use `mamba`, 
-which is a reimplementation of the `conda` package manager in C++ 
-(it has a much faster dependency solver).  
-
-``` bash
-mamba install -c bioconda nextflow
-```
-
-If you do not have `conda` and `mamba`, they may be installed running the following commands:  
-
-``` bash
-## Install `miniconda`
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
-bash /tmp/miniconda.sh -b -p $HOME/miniconda
-~/miniconda/bin/conda init bash
-source ~/.bashrc
-rm /tmp/miniconda.sh
-
-## Install `mamba`
-conda install -c conda-forge mamba
-```
-
-!!! info "Conda"
-    For more details, see [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
