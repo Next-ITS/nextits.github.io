@@ -53,4 +53,5 @@ markdown_extensions:
 nav:
   - 'Introduction':         'index.md'
   - 'Installation':         'installation.md'
+  - 'Quick start':          'quickstart.md'
   - 'Usage instructions':   'usage.md'
