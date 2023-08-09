@@ -28,7 +28,11 @@ sudo apt-get update
 sudo apt-get install default-jdk
 ```
 
-Install Nextflow:
+Alternatively, you may install Java using [SDKMAN!](https://sdkman.io/):  
+``` bash
+curl -s "https://get.sdkman.io" | bash
+sdk install java 17.0.6-amzn
+```
 
 ```bash
 wget -qO- https://get.nextflow.io | bash
