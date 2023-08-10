@@ -157,3 +157,15 @@ To initiate the analysis for individual sequencing runs, execute the following c
 ./run_Step1.sh "Run02"
 ./run_Step1.sh "Run03"
 ```
+
+If you have a large number of sequencing runs, 
+you can automate the process by combining the `find` and 
+[GNU `parallel`](https://www.gnu.org/software/parallel/) 
+utilities:  
+``` bash
+find $(pwd)/Input/ -type d -not -path $(pwd)/Input/ \
+  | sort \
+  | parallel -j1 "./run_Step1.sh {/}"
+```
+This command will locate all sub-directories within the `Input` directory and run the analysis script for each one.
+
