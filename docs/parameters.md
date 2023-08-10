@@ -65,3 +65,16 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--ITSx_tax`     | Taxonomy profile for ITSx ^1^                                                   | "all"         |
 | `--ITSx_evalue`  | E-value cutoff threshold for ITSx                                               | 1e-1          |
 | `--ITSx_partial` | Keep partial ITS sequences (specify a minimum length cutoff), default = off (0) | 0             |
+
+### Chimera identification
+
+| Parameter                       | Description                                                                      | Default Value |
+|---------------------------------|----------------------------------------------------------------------------------|---------------|
+| `--chimera_db`                  | Database for reference-based chimera removal                                     | -             |
+| `--chimera_rescueoccurrence`    | Min occurrence of chimeric sequences required to rescue them                     | 2             |
+| `--chimeranov_abskew`           | `abskew` parameter for de novo chimera identification                            | 2.0           |
+| `--chimeranov_dn`               | `dn` parameter for de novo chimera identification                                | 1.4           |
+| `--chimeranov_mindiffs`         | `mindiffs` parameter for de novo chimera identification                          | 3             |
+| `--chimeranov_mindiv`           | `mindiv` parameter for de novo chimera identification                            | 0.8           |
+| `--chimeranov_minh`             | `minh` parameter for de novo chimera identification                              | 0.28          |
+| `--chimeranov_xn`               | `xn` parameter for de novo chimera identification                                | 8.0           |
