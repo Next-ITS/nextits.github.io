@@ -115,3 +115,12 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | ------------- | --------------------------------------------------------------- |
 | `--data_path` | Input directory containing the results of Step-1                |
 | `--outdir`    | Path to the directory where the analysis results will be saved. |
+
+## Denoising parameters (optional)
+
+| Parameter          | Description                             | Default Value |
+| ------------------ | --------------------------------------- | ------------- |
+| `--unoise`         | Perform denoising with UNOISE algorithm | `false`       |
+| `--unoise_alpha`   | `Alpha` parameter of UNOISE             | 2.0           |
+| `--unoise_minsize` | Minimum sequence abundance              | 8             |
+
