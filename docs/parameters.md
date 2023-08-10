@@ -116,7 +116,7 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--data_path` | Input directory containing the results of Step-1                |
 | `--outdir`    | Path to the directory where the analysis results will be saved. |
 
-## Denoising parameters (optional)
+### Denoising parameters (optional)
 
 | Parameter          | Description                             | Default Value |
 | ------------------ | --------------------------------------- | ------------- |
@@ -125,7 +125,7 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--unoise_minsize` | Minimum sequence abundance              | 8             |
 
 
-## Sequence clustering
+### Sequence clustering
 
 | Parameter              | Description                                   | Default Value |
 |------------------------|-----------------------------------------------|---------------|
@@ -138,7 +138,7 @@ Supported Methods:
 - **shmatching** (currently under development): This method clusters sequences based on species hypotheses (SH) as detailed in Kõljalg et al. 2013 (DOI:10.1111/mec.12481).  
 
 
-### VSEARCH clustering
+#### VSEARCH clustering
 
 | Parameter     | Description                                                         | Default Value |
 | ------------- | ------------------------------------------------------------------- | ------------- |
