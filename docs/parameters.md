@@ -96,3 +96,13 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--tj_p`      | Parameter `p` for tag-jump filtering                     | 1             |
 | `--otu_id`    | Sequence similarity for OTU clustering                   | 0.98          |
 | `--otu_iddef` | Sequence similarity definition for tag-jump removal step | 2             |
+
+### Miscellaneous parameters
+
+| Parameter            | Description                    | Default Value |
+| -------------------- | ------------------------------ | ------------- |
+| `--gzip_compression` | Compression level for GZIP ^1^ | "-7"          |
+
+^1^:
+    "-1" = fastest (worst compression), "-9" = slowest (best)
+
