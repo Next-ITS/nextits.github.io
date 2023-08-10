@@ -25,3 +25,14 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--barcodes` | Path to the file with barcodes (in FASTA format) used for demultiplexing the input data                                |
 | `--outdir`   | Path to the directory where the analysis results will be saved.                                                        |
 
+
+### Demultiplexing
+
+| Parameter            | Description                                                                                                       | Default Value |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
+| `--demultiplexed`    | Whether input is multiplexed (`true`, single FASTQ file) or pre-demultiplexed (`false`, multiple FASTQ files) ^1^ | `true`        |
+| `--lima_minscore`    | Barcode score for demultiplexing                                                                                  | 93            |
+| `--lima_dualbarcode` | Dual-barcoding scheme with identical barcodes at both ends ^2^                                                    | `true`        |
+| `--lima_W`           | Window size for barcode lookup                                                                                    | 70            |
+| `--lima_minlen`      | Minimum sequence length after clipping barcodes                                                                   | 40            |
+
