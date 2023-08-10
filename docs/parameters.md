@@ -15,3 +15,13 @@ they can specify them directly from the command line using double dash arguments
 or opt for a simple parameters file. Utilizing a parameters file is especially advantageous 
 when dealing with numerous settings, as it offers a cleaner command line interface. 
 In addition to this, individual processes within the pipeline can be fine-tuned using a dedicated config file.  
+## Step-1
+
+### Required parameters
+
+| Parameter    | Description                                                                                                            |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `--input`    | Path to the input file containing single-end sequences (in FASTQ format) or the directory with pre-demultiplexed files |
+| `--barcodes` | Path to the file with barcodes (in FASTA format) used for demultiplexing the input data                                |
+| `--outdir`   | Path to the directory where the analysis results will be saved.                                                        |
+
