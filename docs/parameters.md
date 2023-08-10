@@ -124,3 +124,16 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--unoise_alpha`   | `Alpha` parameter of UNOISE             | 2.0           |
 | `--unoise_minsize` | Minimum sequence abundance              | 8             |
 
+
+## Sequence clustering
+
+| Parameter              | Description                                   | Default Value |
+|------------------------|-----------------------------------------------|---------------|
+| `--clustering_method`  | Sequence clustering method                    | "vsearch"     |
+
+Supported Methods:  
+- **vsearch**: This employs greedy clustering using a fixed sequence similarity threshold;  
+- **swarm**: Unlike "vsearch", this uses a dynamic sequence similarity threshold for clustering;  
+- **unoise**: This focuses solely on denoising to create zero-radius OTUs (zOTUs);  
+- **shmatching** (currently under development): This method clusters sequences based on species hypotheses (SH) as detailed in Kõljalg et al. 2013 (DOI:10.1111/mec.12481).  
+
