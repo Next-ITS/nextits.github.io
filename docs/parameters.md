@@ -56,3 +56,12 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--primer_mismatches` | Allowed number of mismatches for primers   | 2                   |
 | `--primer_foverlap`   | Minimum overlap for the forward primer ^2^ | F primer length - 2 |
 | `--primer_roverlap`   | Minimum overlap for the reverse primer ^2^ | R primer length - 2 |
+
+### ITS extraction
+
+| Parameter        | Description                                                                     | Default Value |
+| ---------------- | ------------------------------------------------------------------------------- | ------------- |
+| `--its_region`   | ITS part selector ^2^                                                           | "full"        |
+| `--ITSx_tax`     | Taxonomy profile for ITSx ^1^                                                   | "all"         |
+| `--ITSx_evalue`  | E-value cutoff threshold for ITSx                                               | 1e-1          |
+| `--ITSx_partial` | Keep partial ITS sequences (specify a minimum length cutoff), default = off (0) | 0             |
