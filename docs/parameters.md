@@ -78,3 +78,12 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--chimeranov_mindiv`           | `mindiv` parameter for de novo chimera identification                            | 0.8           |
 | `--chimeranov_minh`             | `minh` parameter for de novo chimera identification                              | 0.28          |
 | `--chimeranov_xn`               | `xn` parameter for de novo chimera identification                                | 8.0           |
+
+### Homopolymer correction
+
+| Parameter         | Description                                               | Default Value |
+| ----------------- | --------------------------------------------------------- | ------------- |
+| `--hp`            | Enable or disable homopolymer correction                  | `true`        |
+| `--hp_similarity` | Allowed sequence similarity for homopolymer correction    | 0.999         |
+| `--hp_iddef`      | Sequence similarity definition for homopolymer correction | 2             |
+
