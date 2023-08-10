@@ -55,4 +55,5 @@ nav:
   - 'Installation':         'installation.md'
   - 'Quick start':          'quickstart.md'
   - 'Usage instructions':   'usage.md'
+  - 'Parameters':           'parameters.md'
   - 'Usage on HPC cluster': 'HPC.md'
