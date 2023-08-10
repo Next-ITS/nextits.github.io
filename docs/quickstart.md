@@ -131,3 +131,29 @@ EOT
 ## Make the script executable
 chmod +x run_Step1.sh
 ```
+
+The script assumes that the data is structured such that 
+the `Input` directory houses multiple sub-directories corresponding to different sequencing runs 
+(e.g., `Run01`, `Run02`, `Run03`), and within each of these sub-directories, 
+there two files: a `FASTQ` file containing high-throughput data and a `FASTA` file with barcodes.  
+For example:  
+
+```
+Input/
+├── Run01/
+│   ├── Run01.fastq.gz
+│   └── Run01_barcodes.fasta
+├── Run02/
+│   ├── Run02.fastq.gz
+│   └── Run02_barcodes.fasta
+└── Run03/
+    ├── Run03.fastq.gz
+    └── Run03_barcodes.fasta
+```
+
+To initiate the analysis for individual sequencing runs, execute the following commands:  
+``` bash
+./run_Step1.sh "Run01"
+./run_Step1.sh "Run02"
+./run_Step1.sh "Run03"
+```
