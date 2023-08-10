@@ -36,3 +36,13 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--lima_W`           | Window size for barcode lookup                                                                                    | 70            |
 | `--lima_minlen`      | Minimum sequence length after clipping barcodes                                                                   | 40            |
 
+
+### Quality filtering
+
+| Parameter                | Description                                                                          | Default Value |
+| ------------------------ | ------------------------------------------------------------------------------------ | ------------- |
+| `--qc_maxee`             | Maximum number of expected errors                                                    | false         |
+| `--qc_maxeerate`         | Maximum number of expected errors per base                                           | 0.01          |
+| `--qc_maxhomopolymerlen` | Threshold for a homopolymer region length in a sequence                              | 25            |
+| `--qc_maxn`              | Discard sequences with more than the specified number of ambiguous nucleotides (N's) | 4             |
+
