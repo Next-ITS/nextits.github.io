@@ -46,3 +46,13 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--qc_maxhomopolymerlen` | Threshold for a homopolymer region length in a sequence                              | 25            |
 | `--qc_maxn`              | Discard sequences with more than the specified number of ambiguous nucleotides (N's) | 4             |
 
+
+### Removal of multiprimer-artifacts and reorienting of reads
+
+| Parameter             | Description                                | Default Value       |
+| --------------------- | ------------------------------------------ | ------------------- |
+| `--primer_forward`    | Sequence of the forward primer ^1^         | GTACACACCGCCCGTCG   |
+| `--primer_reverse`    | Sequence of the reverse primer ^1^         | CCTSCSCTTANTDATATGC |
+| `--primer_mismatches` | Allowed number of mismatches for primers   | 2                   |
+| `--primer_foverlap`   | Minimum overlap for the forward primer ^2^ | F primer length - 2 |
+| `--primer_roverlap`   | Minimum overlap for the reverse primer ^2^ | R primer length - 2 |
