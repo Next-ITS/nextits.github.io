@@ -87,3 +87,12 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--hp_similarity` | Allowed sequence similarity for homopolymer correction    | 0.999         |
 | `--hp_iddef`      | Sequence similarity definition for homopolymer correction | 2             |
 
+
+### Tag-jump Removal Parameters
+
+| Parameter     | Description                                              | Default Value |
+| ------------- | -------------------------------------------------------- | ------------- |
+| `--tj_f`      | UNCROSS parameter `f` for tag-jump filtering             | 0.01          |
+| `--tj_p`      | Parameter `p` for tag-jump filtering                     | 1             |
+| `--otu_id`    | Sequence similarity for OTU clustering                   | 0.98          |
+| `--otu_iddef` | Sequence similarity definition for tag-jump removal step | 2             |
