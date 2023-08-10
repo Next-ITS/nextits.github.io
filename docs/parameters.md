@@ -137,3 +137,11 @@ Supported Methods:
 - **unoise**: This focuses solely on denoising to create zero-radius OTUs (zOTUs);  
 - **shmatching** (currently under development): This method clusters sequences based on species hypotheses (SH) as detailed in Kõljalg et al. 2013 (DOI:10.1111/mec.12481).  
 
+
+### VSEARCH clustering
+
+| Parameter     | Description                                                         | Default Value |
+| ------------- | ------------------------------------------------------------------- | ------------- |
+| `--otu_id`    | Sequence similarity threshold                                       | 0.98          |
+| `--otu_iddef` | Sequence similarity definition (applied to UNOISE as well)          | 2             |
+| `--otu_qmask` | Method to mask low-complexity sequences (applied to UNOISE as well) | "dust"        |
