@@ -90,7 +90,7 @@ nextflow run vmikk/NextITS -r main \
     For more details, see the `Usage instructions`.
 
 
-## Notes
+## Wrapping a command into a script
 
 To follow the [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), 
 it is possible to wrap Step-1 commands into a simple script.
@@ -168,4 +168,12 @@ find $(pwd)/Input/ -type d -not -path $(pwd)/Input/ \
   | parallel -j1 "./run_Step1.sh {/}"
 ```
 This command will locate all sub-directories within the `Input` directory and run the analysis script for each one.
+
+## Configuring the pipeline
+
+While we have endeavored to choose the most sensible default options for the NextITS pipeline, 
+it's worth noting that there are numerous parameters available for configuration and fine-tuning, 
+allowing users to adapt the pipeline to best fit their data.  
+
+Detailed descriptions of these parameters can be found in the [`Parameters`](parameters.md) section of the documentation.
 
