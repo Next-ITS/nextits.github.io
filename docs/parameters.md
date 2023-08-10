@@ -106,3 +106,12 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 ^1^:
     "-1" = fastest (worst compression), "-9" = slowest (best)
 
+
+## Step-2
+
+### Required parameters
+
+| Parameter     | Description                                                     |
+| ------------- | --------------------------------------------------------------- |
+| `--data_path` | Input directory containing the results of Step-1                |
+| `--outdir`    | Path to the directory where the analysis results will be saved. |
