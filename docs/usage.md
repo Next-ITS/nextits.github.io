@@ -69,18 +69,3 @@ If you use barcodes at a single end, please add the `--lima_dualbarcode false` p
     It is possible to tag multiplexed samples with a pair of **different barcodes** attached to the sides of the amplicon. 
     Currently, there is no support for this asymmetric design in NextITS, but it will be added in a future release.
 
-
-## Singularity containers
-
-### Download container from the Singularity library
-
-``` bash
-singularity pull --arch amd64 library://vmiks/nextits/nextits:0-0-2
-```
-
-### Build custom Singularity image
-
-``` bash
-git clone https://github.com/vmikk/NextITS
-sudo singularity build NextITS.sif ./NextITS/containerfiles/main_container.def
-```
