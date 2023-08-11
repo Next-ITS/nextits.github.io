@@ -51,7 +51,7 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 
 | Parameter             | Description                                | Default Value       |
 | --------------------- | ------------------------------------------ | ------------------- |
-| `--primer_forward`    | Sequence of the forward primer ^1^         | GTACACACCGCCCGTCG   |
+| `--primer_forward`    | Sequence of the forward primer ^1^         | TACACACCGCCCGTCG    |
 | `--primer_reverse`    | Sequence of the reverse primer ^1^         | CCTSCSCTTANTDATATGC |
 | `--primer_mismatches` | Allowed number of mismatches for primers   | 2                   |
 | `--primer_foverlap`   | Minimum overlap for the forward primer ^2^ | F primer length - 2 |
