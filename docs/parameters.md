@@ -183,3 +183,11 @@ Supported Methods:
 | `--otu_id`    | Sequence similarity threshold                                       | 0.98          |
 | `--otu_iddef` | Sequence similarity definition (applied to UNOISE as well)          | 2             |
 | `--otu_qmask` | Method to mask low-complexity sequences (applied to UNOISE as well) | "dust"        |
+
+#### SWARM clustering
+
+| Parameter            | Description                                                   | Default Value |
+| -------------------- | ------------------------------------------------------------- | ------------- |
+| `--swarm_d`          | SWARM clustering resolution (`d`)                             | 1             |
+| `--swarm_fastidious` | Link nearby low-abundance swarms (`fastidious` option)        | `true`        |
+| `--swarm_d1boundary` | Minimal mass of large OTUs (only for `fastidious` with `d`=1) | 3             |
