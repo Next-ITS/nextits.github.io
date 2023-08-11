@@ -57,6 +57,17 @@ In addition to this, individual processes within the pipeline can be fine-tuned 
 | `--primer_foverlap`   | Minimum overlap for the forward primer ^2^ | F primer length - 2 |
 | `--primer_roverlap`   | Minimum overlap for the reverse primer ^2^ | R primer length - 2 |
 
+**Default Primers:**  
+By default, NextITS is configured for the data obtained with universal eukaryote primers:
+- **Forward Primer:** `ITS9MUNngs` with sequence `TACACACCGCCCGTCG`
+- **Reverse Primer:** `ITS4ngsUni` with sequence `CCTSCSCTTANTDATATGC`  
+Refer to [Tedersoo & Lindahl, 2016, DOI:10.1111/1758-2229.12438](https://ami-journals.onlinelibrary.wiley.com/doi/10.1111/1758-2229.12438) for more details on these primers.  
+
+**Alternative Forward Primer:**  
+For specific applications, we also recommend the `ITS1catta` forward primer (sequence: `ACCWGCGGARGGATCATTA`). 
+It's designed to target and eliminate plant sequences while avoiding interference from the SSU 3′-end intron.  
+For additional information on this primer, consult [Tedersoo & Anslan, 2019, DOI:10.1111/1758-2229.12776](https://ami-journals.onlinelibrary.wiley.com/doi/10.1111/1758-2229.12776).  
+
 ### ITS extraction
 
 | Parameter        | Description                                                                     | Default Value |
