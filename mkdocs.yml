@@ -28,6 +28,7 @@ theme:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
   features:
+    - content.code.copy
 
 markdown_extensions:
   - attr_list
