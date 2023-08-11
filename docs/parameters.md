@@ -35,7 +35,7 @@ detailed in the sections that follow.
 
 | Parameter            | Description                                                                                                       | Default Value |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
-| `--demultiplexed`    | Whether input is multiplexed (`true`, single FASTQ file) or pre-demultiplexed (`false`, multiple FASTQ files) ^1^ | `true`        |
+| `--demultiplexed`    | Whether input is multiplexed (`false`, single FASTQ file) or pre-demultiplexed (`true`, multiple FASTQ files) ^1^ | `false`       |
 | `--lima_minscore`    | Barcode score for demultiplexing                                                                                  | 93            |
 | `--lima_dualbarcode` | Dual-barcoding scheme with identical barcodes at both ends ^2^                                                    | `true`        |
 | `--lima_W`           | Window size for barcode lookup                                                                                    | 70            |
