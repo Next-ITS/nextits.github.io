@@ -108,7 +108,7 @@ Supported options include:
 
 | Parameter                       | Description                                                                      | Default Value |
 |---------------------------------|----------------------------------------------------------------------------------|---------------|
-| `--chimera_db`                  | Database for reference-based chimera removal                                     | -             |
+| `--chimera_db`                  | Database for reference-based chimera removal (UDB)                               | -             |
 | `--chimera_rescueoccurrence`    | Min occurrence of chimeric sequences required to rescue them                     | 2             |
 | `--chimeranov_abskew`           | `abskew` parameter for de novo chimera identification                            | 2.0           |
 | `--chimeranov_dn`               | `dn` parameter for de novo chimera identification                                | 1.4           |
@@ -116,6 +116,23 @@ Supported options include:
 | `--chimeranov_mindiv`           | `mindiv` parameter for de novo chimera identification                            | 0.8           |
 | `--chimeranov_minh`             | `minh` parameter for de novo chimera identification                              | 0.28          |
 | `--chimeranov_xn`               | `xn` parameter for de novo chimera identification                                | 8.0           |
+
+NextITS employs a two-pronged strategy to detect chimeras:  
+
+1. ***De novo* Detection**:  
+  This algorithm identifies chimeras without relying on reference data. 
+  To mitigate the risk of false-positive detections, sequences flagged as chimeras by the *de novo* method are not discarded instantly. 
+  Instead, they're assigned a chimeric score. Filtering based on this score can be conducted in subsequent analysis stages (refer to Step-2 for more details).  
+
+2. **Reference-based Detection**:  
+  This method leverages a reference database in the UDB format.  
+  An example of such a database is accessible at: [https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy](https://owncloud.ut.ee/owncloud/s/iaQ3i862pjwYgdy).  
+
+Furthermore, NextITS offers an option to "rescue" sequences mistakenly labeled as chimeras.  
+The pipeline checks if these sequences appear in other samples where they are not identified as chimeras. 
+If a sequence is consistently observed, it's more likely to be a genuine biological sequence. 
+You can control this functionality using the `--chimera_rescueoccurrence` parameter.  
+
 
 ### Homopolymer correction
 
