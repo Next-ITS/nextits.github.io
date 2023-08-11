@@ -15,6 +15,11 @@ they can specify them directly from the command line using double dash arguments
 or opt for a simple parameters file. Utilizing a parameters file is especially advantageous 
 when dealing with numerous settings, as it offers a cleaner command line interface. 
 In addition to this, individual processes within the pipeline can be fine-tuned using a dedicated config file.  
+
+NextITS boasts a vast array of configurable parameters. 
+For ease of navigation and understanding, these parameters have been grouped into several categories, 
+detailed in the sections that follow.  
+
 ## Step-1
 
 ### Required parameters
