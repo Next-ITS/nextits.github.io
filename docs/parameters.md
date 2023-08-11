@@ -159,7 +159,7 @@ You can control this functionality using the `--chimera_rescueoccurrence` parame
 | `--gzip_compression` | Compression level for GZIP ^1^ | "-7"          |
 
 ^1^:
-    "-1" = fastest (worst compression), "-9" = slowest (best)
+    `-1` = fastest (worst compression), `-9` = slowest (best)
 
 
 ## Step-2
