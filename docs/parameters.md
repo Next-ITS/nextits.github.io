@@ -91,18 +91,18 @@ This is crucial because:
  [Tedersoo et al. 2022 (DOI:10.1111/mec.16460)](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)).  
 
 **Utilizing ITSx in NextITS:**  
-To address this, NextITS employs the ITSx program. 
-By using the `--its_region` parameter, users can determine the region for subsequent analyses. 
+To address this, NextITS employs the ITSx program ([Bengtsson-Palme et al., 2013 (DOI:10.1111/2041-210X.12073)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12073)).  
+By using the `--its_region` parameter, users can select the region for subsequent analyses.  
 Supported options include:  
-- **full**: Represents the full-length ITS.
-- **ITS1_5.8S_ITS2**: A near-full-length ITS that assembles the sequence from the `ITS1`, `5.8S``, and `ITS2` segments extracted by ITSx.  
+- **full**: Represents the full-length ITS  
+- **ITS1_5.8S_ITS2**: A near-full-length ITS that assembles the sequence from the `ITS1`, `5.8S`, and `ITS2` segments extracted by ITSx.  
   This option is particularly handy when ITSx struggles to detect the end of the SSU. 
   (for instance, when using the `ITS1catta` primer, which is located at the extreme end of the SSU and is not detected by ITSx).  
-- **ITS1**: Represents the ITS1 region.  
-- **ITS2**: Represents the ITS2 region.  
-- **SSU**: Focuses on the small subunit of rRNA (18S).  
-- **LSU**: Focuses on the large subunit of rRNA (28S).  
-- **none**: This option only trims primers without extracting the ITS.  
+- **ITS1**: Represents the ITS1 region  
+- **ITS2**: Represents the ITS2 region  
+- **SSU**: Focuses on the small subunit of rRNA (18S)  
+- **LSU**: Focuses on the large subunit of rRNA (28S)  
+- **none**: This option only trims primers without extracting the ITS  
 
 ### Chimera identification
 
