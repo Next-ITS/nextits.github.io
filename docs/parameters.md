@@ -56,10 +56,20 @@ The pipeline can handle both multiplexed and demultiplexed data inputs:
 
 | Parameter                | Description                                                                          | Default Value |
 | ------------------------ | ------------------------------------------------------------------------------------ | ------------- |
-| `--qc_maxee`             | Maximum number of expected errors                                                    | false         |
+| `--qc_maxee`             | Maximum number of expected errors ^1^                                                | false         |
 | `--qc_maxeerate`         | Maximum number of expected errors per base                                           | 0.01          |
-| `--qc_maxhomopolymerlen` | Threshold for a homopolymer region length in a sequence                              | 25            |
+| `--qc_maxhomopolymerlen` | Threshold for a homopolymer region length in a sequence ^2^                          | 25            |
 | `--qc_maxn`              | Discard sequences with more than the specified number of ambiguous nucleotides (N's) | 4             |
+
+^1^:  
+    As part of the sequence quality control, it is possible to evaluates sequences based on the 
+    maximum number of expected errors (MaxEE) predicted by Phred scores 
+    ([Edgar & Flyvbjerg 2015 DOI:`10.1093/bioinformatics/btv401`](https://academic.oup.com/bioinformatics/article/31/21/3476/194979)) 
+    and the maximum number of expected errors per base. 
+
+^2^:  
+    The ITS region of many fungal and other eukaryotic taxa could commonly harbour homopolymers exceeding 10 bases 
+    ([Tedersoo et al. 2022 DOI:`10.1111/mec.16460`](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)).  
 
 
 ### Removal of multiprimer-artifacts and reorienting of reads
