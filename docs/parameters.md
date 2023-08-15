@@ -162,6 +162,16 @@ You can control this functionality using the `--chimera_rescueoccurrence` parame
 | `--hp_similarity` | Allowed sequence similarity for homopolymer correction    | 0.999         |
 | `--hp_iddef`      | Sequence similarity definition for homopolymer correction | 2             |
 
+Although the PacBio HiFi reads are highly accurate, but they sometimes show errors in homopolymeric sites (e.g., `AAAAAAA` stretches). 
+These sites are also naturally prevalent in fungal ITS. 
+Such errors can lead to an inflated number of OTUs, slowing down clustering and reducing its efficiency. 
+To counteract this, NextITS has a strategy to correct these homopolymer errors. 
+For each sample, the dominant variant of the homopolymer sequence is retained and used.  
+
+<figure markdown>
+  ![Homopolymer correction](/assets/hp_correction.png.webp){ width="200" }
+  <figcaption>Homopolymer correction</figcaption>
+</figure>
 
 ### Tag-jump Removal Parameters
 
