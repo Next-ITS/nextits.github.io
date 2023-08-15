@@ -197,8 +197,11 @@ which assigns an *ad hoc* score to measure the likelihood of tag-jump events.
 | -------------------- | ------------------------------ | ------------- |
 | `--gzip_compression` | Compression level for GZIP ^1^ | "-7"          |
 
-^1^:
-    `-1` = fastest (worst compression), `-9` = slowest (best)
+^1^:  
+    To save disk space and potentially enhance data reading speed, 
+    NextITS compresses data using gzip. 
+    Adjust the balance between speed and compression ratio with the `--gzip_compression` parameter. 
+    Where `-1` is the fastest option (worst compression), and `-9` is slowest (best compression).  
 
 
 ## Step-2
