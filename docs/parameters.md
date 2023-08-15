@@ -86,12 +86,12 @@ The pipeline can handle both multiplexed and demultiplexed data inputs:
 By default, NextITS is configured for the data obtained with universal eukaryote primers:  
 - **Forward Primer:** `ITS9MUNngs` with sequence `TACACACCGCCCGTCG`  
 - **Reverse Primer:** `ITS4ngsUni` with sequence `CCTSCSCTTANTDATATGC`  
-Refer to [Tedersoo & Lindahl, 2016 (DOI:10.1111/1758-2229.12438)](https://ami-journals.onlinelibrary.wiley.com/doi/10.1111/1758-2229.12438) for more details on these primers.  
+Refer to [Tedersoo & Lindahl, 2016 DOI:`10.1111/1758-2229.12438`](https://ami-journals.onlinelibrary.wiley.com/doi/10.1111/1758-2229.12438) for more details on these primers.  
 
 **Alternative Forward Primer:**  
 For specific applications, we also recommend the `ITS1catta` forward primer (sequence: `ACCWGCGGARGGATCATTA`). 
 It's designed to target and exclude plant sequences while avoiding interference from the SSU 3′-end intron.  
-For additional information on this primer, consult [Tedersoo & Anslan, 2019 (DOI:10.1111/1758-2229.12776)](https://ami-journals.onlinelibrary.wiley.com/doi/10.1111/1758-2229.12776).  
+For additional information on this primer, consult [Tedersoo & Anslan, 2019 DOI:`10.1111/1758-2229.12776`](https://ami-journals.onlinelibrary.wiley.com/doi/10.1111/1758-2229.12776).  
 
 ### ITS extraction
 
@@ -107,11 +107,11 @@ This is crucial because:
 - These conserved regions don't offer species-level differentiation.  
 - Random errors in these areas can disrupt sequence clustering.  
 - Chimeric breakpoints, which are common in these regions, are hard to detect in short fragments ranging from 10 to 70 bases.  
-(For details, see [Lindahl et al. 2013, DOI:10.1111/nph.12243)](https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.12243) and
- [Tedersoo et al. 2022 (DOI:10.1111/mec.16460)](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)).  
+(For details, see [Lindahl et al. 2013 DOI:`10.1111/nph.12243`](https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.12243) and
+ [Tedersoo et al. 2022 DOI:`10.1111/mec.16460`](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)).  
 
 **Utilizing ITSx in NextITS:**  
-To address this, NextITS employs the ITSx program ([Bengtsson-Palme et al., 2013 (DOI:10.1111/2041-210X.12073)](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12073)).  
+To address this, NextITS employs the ITSx program ([Bengtsson-Palme et al., 2013 DOI:`10.1111/2041-210X.12073`](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12073)).  
 By using the `--its_region` parameter, users can select the region for subsequent analyses.  
 Supported options include:  
 - **full**: Represents the full-length ITS  
@@ -210,19 +210,19 @@ Supported Methods:
 - **vsearch**:  
   This employs greedy clustering using a fixed sequence similarity threshold with 
   [VSEARCH](https://github.com/torognes/vsearch/) 
-  ([Rognes et al., 2016 (DOI:10.7717/peerj.2584)](https://peerj.com/articles/2584/));  
+  ([Rognes et al., 2016, DOI:`10.7717/peerj.2584`](https://peerj.com/articles/2584/));  
 - **swarm**:  
   Unlike "vsearch", this uses a dynamic sequence similarity threshold for clustering with 
   [SWARM](https://github.com/torognes/swarm) 
-  ([Mahé et al., 2021 (DOI:10.1093/bioinformatics/btab493)](https://academic.oup.com/bioinformatics/article/38/1/267/6318385));  
+  ([Mahé et al., 2021, DOI:`10.1093/bioinformatics/btab493`](https://academic.oup.com/bioinformatics/article/38/1/267/6318385));  
 - **unoise**:  
   This focuses solely on denoising to create zero-radius OTUs (zOTUs) 
   based on the [UNOISE3](https://www.drive5.com/usearch/manual/unoise_algo.html) algorithm 
-  ([Edgar, 2016 (DOI:10.1101/081257)](https://www.biorxiv.org/content/10.1101/081257v1));  
+  ([Edgar, 2016, DOI:`10.1101/081257`](https://www.biorxiv.org/content/10.1101/081257v1));  
 - **shmatching** (currently under development):  
   This method clusters sequences based on species hypotheses (SH) as detailed in 
-  ([Kõljalg et al., 2013 (DOI:10.1111/mec.12481)](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.12481), 
-   [Abarenkov et al., 2022 (DOI:10.3897/biss.6.93856)](https://biss.pensoft.net/article/93856/)
+  ([Kõljalg et al., 2013, DOI:`10.1111/mec.12481`](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.12481), 
+   [Abarenkov et al., 2022, DOI:`10.3897/biss.6.93856`](https://biss.pensoft.net/article/93856/)
    );  
 
 #### VSEARCH clustering
