@@ -182,6 +182,15 @@ For each sample, the dominant variant of the homopolymer sequence is retained an
 | `--otu_id`    | Sequence similarity for OTU clustering                   | 0.98          |
 | `--otu_iddef` | Sequence similarity definition for tag-jump removal step | 2             |
 
+Tag-jumps, sometimes referred to as index-switches or index cross-talk, are significant concerns in high-throughput sequencing (HTS) data 
+([Tedersoo et al. 2022 DOI:`10.1111/mec.16460`](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)). 
+They can cause technical cross-contamination between samples, potentially distorting estimates of microbial community composition. 
+While careful sample indexing can mitigate this problem, a small percentage (approximately 0.01–0.1%) of these errors might persist in the data. 
+NextITS provides a solution to evaluate index-switches using the 
+[UNCROSS2](https://drive5.com/usearch/manual/uncross_algo.html) algorithm 
+([Edgar 2018 DOI:`10.1101/400762`](https://www.biorxiv.org/content/10.1101/400762v1)), 
+which assigns an *ad hoc* score to measure the likelihood of tag-jump events.  
+
 ### Miscellaneous parameters
 
 | Parameter            | Description                    | Default Value |
