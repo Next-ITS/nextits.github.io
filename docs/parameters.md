@@ -262,3 +262,13 @@ Supported Methods:
 | `--swarm_d`          | SWARM clustering resolution (`d`)                             | 1             |
 | `--swarm_fastidious` | Link nearby low-abundance swarms (`fastidious` option)        | `true`        |
 | `--swarm_d1boundary` | Minimal mass of large OTUs (only for `fastidious` with `d`=1) | 3             |
+
+### OTU table preparation, thresholds for singleton and *de novo* chimera removal
+
+| Parameter                  | Description                                                                | Default Value |
+| -------------------------- | -------------------------------------------------------------------------- | ------------- |
+| `--merge_replicates`       | Pool sample replicates (e.g., re-sequenced samples) in the final OTU table | `false`       |
+| `--max_MEEP`               | Maximum allowed number of expected errors per 100 bp                       | 0.5           |
+| `--max_ChimeraScore`       | Maximum allowed *de novo* chimera score                                    | 0.6           |
+| `--recover_lowqsingletons` | Logical, Recover *de novo* chimeras ^1^                                    | `true`        |
+| `--recover_denovochimeras` | Logical, Recover singletons ^2^                                            | `true`        |
