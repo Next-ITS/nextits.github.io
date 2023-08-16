@@ -240,8 +240,14 @@ which assigns an *ad hoc* score to measure the likelihood of tag-jump events.
 | Parameter          | Description                             | Default Value |
 | ------------------ | --------------------------------------- | ------------- |
 | `--unoise`         | Perform denoising with UNOISE algorithm | `false`       |
-| `--unoise_alpha`   | `Alpha` parameter of UNOISE             | 2.0           |
-| `--unoise_minsize` | Minimum sequence abundance              | 8             |
+| `--unoise_alpha`   | `Alpha` parameter of UNOISE ^1^         | 2.0           |
+| `--unoise_minsize` | Minimum sequence abundance ^2^          | 8             |
+
+The UNOISE algorithm ([Edgar, 2016, DOI:`10.1101/081257`](https://www.biorxiv.org/content/10.1101/081257v1)) 
+focuses on error-correction (or denoising) of amplicon reads. 
+Essentially, UNOISE operates on the principle that if a sequence with low abundance 
+closely resembles another sequence with high abundance, the former is probably an error. 
+This helps differentiate between true biological variation and sequencing errors.  
 
 
 ### Sequence clustering
