@@ -46,10 +46,33 @@ For **pre-demultiplexed** data (prepared using external tools):
 | Parameter            | Description                                                                                                       | Default Value |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
 | `--demultiplexed`    | Whether input is multiplexed (`false`, single FASTQ file) or pre-demultiplexed (`true`, multiple FASTQ files) ^1^ | `false`       |
-| `--lima_minscore`    | Barcode score for demultiplexing                                                                                  | 93            |
-| `--lima_dualbarcode` | Dual-barcoding scheme with identical barcodes at both ends ^2^                                                    | `true`        |
+| `--lima_minscore`    | Barcode score for demultiplexing ^2^                                                                              | 93            |
+| `--lima_dualbarcode` | Dual-barcoding scheme with identical barcodes at both ends ^3^                                                    | `true`        |
 | `--lima_W`           | Window size for barcode lookup                                                                                    | 70            |
 | `--lima_minlen`      | Minimum sequence length after clipping barcodes                                                                   | 40            |
+
+^1^:  
+    By default, NextITS assumes you're providing multiplexed data, 
+    which means a single FASTQ file accompanied by a FASTA file containing barcodes.  
+    If your data is already separated into individual samples 
+    (meaning you have multiple FASTQ files, potentially more than one for each sample), 
+    use the `--demultiplexed true` option.  
+
+^2^:  
+    For every barcode, [LIMA](https://lima.how/) evaluates a score corresponding to its region. 
+    This score signifies the alignment accuracy between the chosen barcode and sequencing read, 
+    and it's determined using the Smith-Waterman algorithm. 
+    For the HiFi data, adjust the score based on your tolerance for contamination:  
+    a setting of `--min-score 80` should ensure over 99.99% precision.
+    If you're working with shorter barcodes, such as 10 base pairs, consider reducing the minimum score for optimal results.  
+    For a more comprehensive information, check out [https://lima.how/faq/barcode-score.html](https://lima.how/faq/barcode-score.html).  
+
+^3^:  
+    Barcodes, which can also be referred to as adaptors, tags, indices, molecular identifiers (MIDs), come in various library designs. 
+    At present, NextITS supports two barcoding schemes: dual-barcoding (which is the default) and single-barcoding. 
+    For the dual-barcoding scheme, the amplicon should have *the same barcode* on both ends. 
+    An asymmetric design, where each side of the amplicon has a *different barcode pair*, is still in development.  
+    For a comprehensive understanding of barcode designs, please visit [https://lima.how/barcode-design.html](https://lima.how/barcode-design.html).  
 
 
 ### Quality filtering
