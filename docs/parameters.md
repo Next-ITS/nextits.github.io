@@ -32,14 +32,14 @@ detailed in the sections that follow.
 
 The pipeline can handle both multiplexed and demultiplexed data inputs:  
 
-- For **multiplexed** data:  
-  - Use the `--input` parameter to specify a single FASTQ file (e.g., `Run01.fastq.gz`);  
-  - You must also provide the `--barcodes` parameter, which should reference a FASTA file. The sequence names in this file should correspond to the sample names.  
+For **multiplexed** data:  
+- Use the `--input` parameter to specify a single FASTQ file (e.g., `Run01.fastq.gz`);  
+- You must also provide the `--barcodes` parameter, which should reference a FASTA file. The sequence names in this file should correspond to the sample names.  
 
-- For **pre-demultiplexed** data (prepared using external tools):  
-  - The `--input` parameter should direct to a directory containing individual FASTQ files for each sample;  
-  - There's no need to provide a barcodes file in this case;  
-  - Demultiplexed parameter should be enabled (`--demultiplexed true`).  
+For **pre-demultiplexed** data (prepared using external tools):  
+- The `--input` parameter should direct to a directory containing individual FASTQ files for each sample;  
+- There's no need to provide a barcodes file in this case;  
+- Demultiplexed parameter should be enabled (`--demultiplexed true`).  
 
 ### Demultiplexing
 
