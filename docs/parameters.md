@@ -191,8 +191,8 @@ To counteract this, NextITS has a strategy to correct these homopolymer errors.
 For each sample, the dominant variant of the homopolymer sequence is retained and used.  
 
 <figure markdown>
-  ![Homopolymer correction](/assets/hp_correction.png.webp){ width="200" }
-  <figcaption>Homopolymer correction</figcaption>
+  ![Homopolymer correction](/assets/hp_correction.png.webp){ width="300" }
+  <figcaption>Homopolymer correction (n is the number of reads)</figcaption>
 </figure>
 
 ### Tag-jump Removal Parameters
