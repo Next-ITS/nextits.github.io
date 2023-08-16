@@ -133,7 +133,6 @@ This is crucial because:
 (For details, see [Lindahl et al. 2013 DOI:`10.1111/nph.12243`](https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.12243) and
  [Tedersoo et al. 2022 DOI:`10.1111/mec.16460`](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)).  
 
-**Utilizing ITSx in NextITS:**  
 To address this, NextITS employs the ITSx program ([Bengtsson-Palme et al., 2013 DOI:`10.1111/2041-210X.12073`](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12073)).  
 By using the `--its_region` parameter, users can select the region for subsequent analyses.  
 Supported options include:  
