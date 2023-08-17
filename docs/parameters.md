@@ -207,7 +207,8 @@ For each sample, the dominant variant of the homopolymer sequence is retained an
 Tag-jumps, sometimes referred to as index-switches or index cross-talk, are significant concerns in high-throughput sequencing (HTS) data 
 ([Tedersoo et al. 2022 DOI:`10.1111/mec.16460`](https://onlinelibrary.wiley.com/doi/full/10.1111/mec.16460)). 
 They can cause technical cross-contamination between samples, potentially distorting estimates of microbial community composition. 
-While careful sample indexing can mitigate this problem, a small percentage (approximately 0.01–0.1%) of these errors might persist in the data. 
+While careful sample indexing can mitigate this problem, a small percentage (approximately 0.01–0.1%) of these errors might persist in the data.  
+
 NextITS provides a solution to evaluate index-switches using the 
 [UNCROSS2](https://drive5.com/usearch/manual/uncross_algo.html) algorithm 
 ([Edgar 2018 DOI:`10.1101/400762`](https://www.biorxiv.org/content/10.1101/400762v1)), 
@@ -248,6 +249,15 @@ focuses on error-correction (or denoising) of amplicon reads.
 Essentially, UNOISE operates on the principle that if a sequence with low abundance 
 closely resembles another sequence with high abundance, the former is probably an error. 
 This helps differentiate between true biological variation and sequencing errors.  
+
+^1^:  
+    The `--unoise_alpha` option sets the alpha parameter, as described in the [UNOISE2 paper](https://www.biorxiv.org/content/10.1101/081257v1). 
+    Essentially, this parameter establishes the dissimilarity threshold between frequent and infrequent reads.  
+
+^2^:  
+    The `--unoise_minsize` option (which corresponds to the `-minsize` parameter in USEARCH), 
+    determines the minimum abundance a sequence must have across all samples. 
+    Any sequences with abundances below this threshold will be discarded, as sequences with very low abundances tend to be noisy.  
 
 
 ### Sequence clustering
