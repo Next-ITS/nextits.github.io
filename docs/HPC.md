@@ -31,7 +31,7 @@ Three potential usage scenarios are:
     However, the turnaround time might increase based on the cluster's activity, since each task might have to wait its turn in the queue. 
     Despite this, the mode offers heightened flexibility because it allows for precise resource allocation and scaling based on the demands of individual tasks.  
     For a clearer understanding of this scenario, consider the following illustration:  
-    ![The anatomy of an HPC cluster](https://github.com/nextflow-io/website/blob/88738b52f68e09ebb153c638d37ff406e3b7d296/assets/img/nextflow-on-big-iron-twelve-tips-for-improving-the-effectiveness-of-pipelines-on-hpc-clusters-1.jpg)  
+    ![The anatomy of an HPC cluster](https://github.com/nextflow-io/website/blob/master/assets/img/nextflow-on-big-iron-twelve-tips-for-improving-the-effectiveness-of-pipelines-on-hpc-clusters-1.jpg?raw=true)  
     (Image source: https://www.nextflow.io/blog/2023/best-practices-deploying-pipelines-with-hpc-workload-managers.html).  
 
 - **Hybrid Workload**:  
