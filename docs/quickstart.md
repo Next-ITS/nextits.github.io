@@ -65,6 +65,11 @@ nextflow run vmikk/NextITS -r main \
   --outdir         "Step1_Results/Run03"
 ```
 
+!!! info "Container engines"
+    In the provided examples, we've assumed that you're utilizing **Singularity** as your container engine.  
+    However, if you prefer to use **Docker**, it's a straightforward switch. 
+    Simply modify the setting from `-profile singularity` to `-profile docker` in the command.  
+
 ## Step 2
 
 Step-2 combines the results from Step-1.  
