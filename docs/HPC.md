@@ -42,3 +42,23 @@ Three potential usage scenarios are:
     the results can be retrieved and the pipeline can continue executing other tasks using the primary executor. 
     This approach taps into the best of both worlds by using specialized resources for demanding tasks and local or primary resources for regular tasks.  
 
+
+In this guide, we'll concentrate on the **simple scenario**, 
+ideal for managing medium-to-large-sized datasets and aligning with the needs of most users. 
+We'll primarily focus on configurations and commands tailored for **Slurm**, 
+given its popularity in academic institutions. 
+If you're uncertain about the workload manager employed on your HPC, please reach out to your IT department.  
+
+
+When initiating a job on a cluster, consider specifying these resource requirements:
+
+- **CPUs**: The required number of processor cores for the task.  
+- **Memory**: Different processes might have distinct RAM needs. For instance, sequence clustering often demands more memory.  
+- **Time**: The maximum duration allowed for the pipeline to run.  
+
+The HPC scheduler utilizes these details to allocate your task to a suitable computing node. 
+Determining the right resources often varies based on the dataset's size. 
+Additionally, your system may have some restrictions based on its HPC policies. 
+Overallocating can lead to underutilized resources, longer wait times, and reduced cluster efficiency for other users. 
+Conversely, underallocating risks task failures.
+
