@@ -321,3 +321,15 @@ Supported Methods:
     if a within-sequencing run singleton sequence with relatively low quality (based on MEEP) 
     was observed in the other samples, it will be recovered.
 
+
+### Post-clustering curation with LULU
+
+| Parameter          | Description                            | Default Value |
+| ------------------ | -------------------------------------- | ------------- |
+| `--lulu`           | Run LULU                               | true          |
+| `--lulu_match`     | Minimum similarity threshold           | 95.0          |
+| `--lulu_ratio`     | Minimum abundance ratio                | 1.0           |
+| `--lulu_ratiotype` | Abundance ratio type - "min" or "avg"  | "min"         |
+| `--lulu_relcooc`   | Relative co-occurrence                 | 0.95          |
+| `--lulu_maxhits`   | Maximum number of hits (0 = unlimited) | 0             |
+
