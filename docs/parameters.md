@@ -293,6 +293,12 @@ This helps differentiate between true biological variation and sequencing errors
     determines the minimum abundance a sequence must have across all samples. 
     Any sequences with abundances below this threshold will be discarded, as sequences with very low abundances tend to be noisy.  
 
+It's important to note that UNOISE was initially designed and optimized for Illumina data. 
+Because of indel errors stemming from inaccuracies in homopolymeric regions, 
+UNOISE might not work well with data that hasn't undergone homopolymer correction 
+(more details at the [USEARCH web-site](https://www.drive5.com/usearch/manual/faq_unoise_not_illumina.html)).  
+Therefore, when using UNOISE, ensure you activate both options by setting `--unoise true` and `--hp true` together.
+
 
 ### Sequence clustering
 
