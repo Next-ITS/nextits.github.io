@@ -20,6 +20,7 @@ to name a few.
 In the upcoming section, we'll guide you through the process of setting up and initiating NextITS on a cluster environment, 
 like your University's computing cluster.  
 
+## Usage scenarios
 
 Three potential usage scenarios are:  
 
@@ -54,6 +55,7 @@ We'll primarily focus on configurations and commands tailored for **Slurm**,
 given its popularity in academic institutions. 
 If you're uncertain about the workload manager employed on your HPC, please reach out to your IT department.  
 
+## Resource requirements
 
 When initiating a job on a cluster, consider specifying these resource requirements:
 
