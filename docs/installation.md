@@ -79,6 +79,17 @@ conda install -c conda-forge mamba
 
 ## Container engines
 
+NextITS integrates numerous bioinformatic tools, and managing their installations and updates can be quite intricate for users. 
+To simplify this, all these tools are packaged within containers. 
+This not only makes installations hassle-free but also ensures consistent software versions, 
+guaranteeing reproducible results across different systems.  
+
+NextITS supports two container systems: 
+[Singularity](https://sylabs.io/docs/) and 
+[Docker](https://www.docker.com/).  
+
+Singularity is often the preferred choice for High-Performance Computing (HPC) environments due to its compatibility and security features. 
+On the other hand, Docker might be a tad easier to set up on local systems, making it a popular choice for personal use.  
 
 ### Singularity
 
