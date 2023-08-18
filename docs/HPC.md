@@ -6,12 +6,17 @@ description: >-
 
 # Usage on HPC cluster
 
-NextITS leverages the capabilities of the Nextflow workflow manager, 
+NextITS leverages the capabilities of the [Nextflow](https://www.nextflow.io/) workflow manager, 
 designed to maximize the efficiency and flexibility of your analyses by fully utilizing available computational resources. 
 This means that you can seamlessly deploy the pipeline on high-performance computing (HPC) clusters, 
 making it especially beneficial for large-scale datasets.  
 
-Nextflow is compatible with all major job schedulers, including Slurm, OpenPBS, TORQUE, and Apache Ignite, to name a few. 
+Nextflow is compatible with all major job schedulers, including 
+[Slurm](https://slurm.schedmd.com/documentation.html), 
+[OpenPBS](https://www.openpbs.org/), 
+[TORQUE](https://adaptivecomputing.com/cherry-services/torque-resource-manager/), 
+and [Apache Ignite](https://ignite.apache.org/), 
+to name a few. 
 In the upcoming section, we'll guide you through the process of setting up and initiating NextITS on a cluster environment, 
 like your University's computing cluster.  
 
