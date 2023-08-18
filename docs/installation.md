@@ -202,6 +202,19 @@ git clone https://github.com/vmikk/NextITS
 sudo singularity build NextITS.sif ./NextITS/containerfiles/main_container.def
 ```
 
+### Docker
+#### Download container from Docker Hub
+
+``` bash
+docker pull vmikk/nextits
+```
+
+#### Build custom image
+
+``` bash
+git clone https://github.com/vmikk/NextITS
+docker build --tag nextits --file NextITS/containerfiles/NextITS.dockerfile .
+```
 
 ### Other container engines
 
