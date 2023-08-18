@@ -8,16 +8,24 @@ description: >-
 
 NextITS was primarily developed for Linux. To run it from a command line on Windows, please use Windows Subsystem for Linux ([WSL](https://learn.microsoft.com/en-us/windows/wsl/install)).
 
-All pipeline dependencies were encapsulated in Singularity containers, which will be automatically downloaded with the first run of NextITS. Only the main dependencies must be installed manually. They include:  
+All pipeline dependencies were encapsulated in Singularity and Docker containers, 
+which will be automatically downloaded with the first run of NextITS. 
+Only the main dependencies must be installed manually. They include:  
 
 - [Java](https://www.oracle.com/java/technologies/downloads/)  
 - [Nextflow](https://www.nextflow.io/)  
 - [Singularity](https://docs.sylabs.io/guides/latest/user-guide/) or [Docker](https://www.docker.com/) container engine
 
 
-## Manual installation
+## Nextflow
 
-[`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation)  (`>=22.10.0`) requires Java 11 (or later, up to 20) to be installed.
+[Nextflow](https://www.nextflow.io/) is the workflow manager responsible for 
+coordinating and executing all command line tools seamlessly. 
+
+### Manual installation
+
+[`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) (`>=23.04.0`) 
+requires Java 11 (or later, up to 20) to be installed.
 
 To install Java, you may use your system's package manager.  
 If you're using Debian/Ubuntu, execute the following command:  
@@ -40,7 +48,7 @@ chmod +x ./nextflow
 mkdir -p ~/bin & mv ./nextflow ~/bin/
 ```
 
-## Installation using `conda`
+### Installation using `conda`
 
 It is possible to install the basic dependencies using [`conda`](https://docs.conda.io/en/latest/), 
 a package and environment management system. Here, we will use `mamba`, 
@@ -69,8 +77,10 @@ conda install -c conda-forge mamba
     For more details, see [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html)
 
 
+## Container engines
 
-## [`Singularity`](https://sylabs.io/docs/)
+
+### Singularity
 
 To install Singularity on Debian-based systems (including Ubuntu), run:
 
@@ -117,6 +127,7 @@ export VERSION=3.9.8 && \
     If it is present on your system, you will need to load the module prior to running NextITS.  
     E.g., ```module load singularityce/3.9.1```  
 
+### Docker
 
 ## Databases
 
@@ -135,13 +146,14 @@ nextflow run vmikk/nextits -r main -profile test
 
 ## Containers
 
-### Download container from the Singularity library
+### Singularity
+#### Download container from the Singularity library
 
 ``` bash
 singularity pull --arch amd64 library://vmiks/nextits/nextits:0-0-5
 ```
 
-### Build custom Singularity image
+#### Build custom Singularity image
 
 ``` bash
 git clone https://github.com/vmikk/NextITS
