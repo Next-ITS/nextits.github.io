@@ -163,7 +163,7 @@ sudo singularity build NextITS.sif ./NextITS/containerfiles/main_container.def
 
 ### Other container engines
 
-!!! note "Other container engines"
+!!! example "Other container engines"
      In the future, we plan to add support for the other container engines 
      (e.g., `Podman`, `Shifter`, or `Charliecloud`) in NextITS.  
 
