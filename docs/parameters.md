@@ -146,6 +146,40 @@ Supported options include:
 - **LSU**: Focuses on the large subunit of rRNA (28S)  
 - **none**: This option only trims primers without extracting the ITS  
 
+
+At the ITS extraction step of the pipeline, you can define a specific taxonomic group of interest. 
+ITSx employs hidden Markov models (HMMs) tailored for 20 eukaryotic taxonomic groups. 
+These models detect patterns in rRNA by recognizing variations commonly observed in multiple sequence alignments. 
+To select the taxon of interest, use the `--ITSx_tax` parameter. 
+You can input either single-character codes (e.g., `--ITSx_tax f`) or full names (e.g., `--ITSx_tax fungi`). 
+For multiple selections, provide a comma-separated string, such as `--ITSx_tax amoebozoa,rhizaria`. 
+For mixed-taxon datasets, there's an all-encompassing search option: `--ITSx_tax all` (which is enabled by default). 
+A table detailing all supported organism groups is provided below:  
+
+| Code | Full name         | Alternative name |
+| ---- | ----------------- | ---------------- |
+| `.`  | All               | all              |
+| `A`  | Alveolata         | alveolates       |
+| `B`  | Bryophyta         | mosses           |
+| `C`  | Bacillariophyta   | diatoms          |
+| `D`  | Amoebozoa         |                  |
+| `E`  | Euglenozoa        |                  |
+| `F`  | Fungi             |                  |
+| `G`  | Chlorophyta       | green-algae      |
+| `H`  | Rhodophyta        | red-algae        |
+| `I`  | Phaeophyceae      | brown-algae      |
+| `L`  | Marchantiophyta   | liverworts       |
+| `M`  | Metazoa           | animals          |
+| `O`  | Oomycota          | oomycetes        |
+| `P`  | Haptophyceae      | prymnesiophytes  |
+| `Q`  | Raphidophyceae    | raphidophytes    |
+| `R`  | Rhizaria          |                  |
+| `S`  | Synurophyceae     | synurids         |
+| `T`  | Tracheophyta      | higher-plants    |
+| `U`  | Eustigmatophyceae | eustigmatophytes |
+| `X`  | Apusozoa          |                  |
+| `Y`  | Parabasalia       | parabasalids     |
+
 ### Chimera identification
 
 | Parameter                       | Description                                                                      | Default Value |
