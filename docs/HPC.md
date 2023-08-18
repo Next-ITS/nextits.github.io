@@ -20,6 +20,10 @@ to name a few.
 In the upcoming section, we'll guide you through the process of setting up and initiating NextITS on a cluster environment, 
 like your University's computing cluster.  
 
+!!! info "Tips for optimizing pipeline performance on HPC clusters"
+    For an in-depth exploration, including details on specific workload manager features, please refer to  
+    [https://www.nextflow.io/blog/2023/best-practices-deploying-pipelines-with-hpc-workload-managers.html].  
+
 ## Usage scenarios
 
 Three potential usage scenarios are:  
