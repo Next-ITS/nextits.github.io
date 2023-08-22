@@ -42,7 +42,7 @@ Three potential usage scenarios are:
     Despite this, the mode offers heightened flexibility because it allows for precise resource allocation and scaling based on the demands of individual tasks.  
     For a clearer understanding of this scenario, consider the following illustration:  
     ![The anatomy of an HPC cluster](https://github.com/nextflow-io/website/blob/master/assets/img/nextflow-on-big-iron-twelve-tips-for-improving-the-effectiveness-of-pipelines-on-hpc-clusters-1.jpg?raw=true)  
-    (Image source: https://www.nextflow.io/blog/2023/best-practices-deploying-pipelines-with-hpc-workload-managers.html).  
+    (Image source: [https://www.nextflow.io/blog/2023/best-practices-deploying-pipelines-with-hpc-workload-managers.html](https://www.nextflow.io/blog/2023/best-practices-deploying-pipelines-with-hpc-workload-managers.html)).  
 
 - **Hybrid Workload**:  
     This versatile scenario integrates various resources (local/HPC/cloud). 
