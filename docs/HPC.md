@@ -11,7 +11,7 @@ designed to maximize the efficiency and flexibility of your analyses by fully ut
 This means that you can seamlessly deploy the pipeline on high-performance computing (HPC) clusters, 
 making it especially beneficial for large-scale datasets.  
 
-Nextflow is compatible with all major job schedulers, including 
+Nextflow is compatible with all major [job schedulers](https://en.wikipedia.org/wiki/Job_scheduler), including 
 [Slurm](https://slurm.schedmd.com/documentation.html), 
 [OpenPBS](https://www.openpbs.org/), 
 [TORQUE](https://adaptivecomputing.com/cherry-services/torque-resource-manager/), 
