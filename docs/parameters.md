@@ -373,3 +373,6 @@ Supported Methods:
 | `--lulu_relcooc`   | Relative co-occurrence                 | 0.95          |
 | `--lulu_maxhits`   | Maximum number of hits (0 = unlimited) | 0             |
 
+**Please Note:** The default value for `--lulu_match` 
+in NextITS is set to a 95% similarity threshold. 
+This differs from the original LULU paper, where the default threshold is 84%.
