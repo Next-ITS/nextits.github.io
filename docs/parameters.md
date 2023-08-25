@@ -79,7 +79,7 @@ For **pre-demultiplexed** data (prepared using external tools):
 
 | Parameter                | Description                                                                          | Default Value |
 | ------------------------ | ------------------------------------------------------------------------------------ | ------------- |
-| `--qc_maxee`             | Maximum number of expected errors ^1^                                                | false         |
+| `--qc_maxee`             | Maximum number of expected errors ^1^                                                | -             |
 | `--qc_maxeerate`         | Maximum number of expected errors per base                                           | 0.01          |
 | `--qc_maxhomopolymerlen` | Threshold for a homopolymer region length in a sequence ^2^                          | 25            |
 | `--qc_maxn`              | Discard sequences with more than the specified number of ambiguous nucleotides (N's) | 4             |
