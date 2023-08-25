@@ -382,3 +382,13 @@ This differs from the original LULU paper, where the default threshold is 84%.
     using symbolic links (or symlinks) which help save disk space. 
     Each symlink points to the actual file located in the process working directory. 
     This behavior can be modified using the `--storagemode` parameter.  
+    Refer to the table below for a complete list of available storage mode options.  
+
+| Storage mode | Description                                              |
+| ------------ | -------------------------------------------------------- |
+| `symlink`    | Creates a symbolic link to the file                      |
+| `copy`       | Copies the file to the target directory                  |
+| `move`       | Moves the file to the target directory (not recommended) |
+| `rellink`    | Creates a relative symbolic link to the file             |
+| `link`       | Creates a hard link to the file                          |
+
