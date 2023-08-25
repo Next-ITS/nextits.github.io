@@ -377,3 +377,8 @@ This differs from the original LULU paper, where the default threshold is 84%.
     Adjust the balance between speed and compression ratio with the `--gzip_compression` parameter. 
     Where `-1` is the fastest option (worst compression), and `-9` is slowest (best compression).  
 
+^2^:  
+    In the default setup, files are directed to the results folder (`--output`) 
+    using symbolic links (or symlinks) which help save disk space. 
+    Each symlink points to the actual file located in the process working directory. 
+    This behavior can be modified using the `--storagemode` parameter.  
