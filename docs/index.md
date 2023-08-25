@@ -8,9 +8,13 @@ The most widely used genetic markers for metabarcoding fungal communities are hi
 
 ## NextITS Workflow
 
-<a class="zoom" href="/assets/NextITS_Workflow.png">
-![NextITS Workflow](/assets/NextITS_Workflow.png)
-</a>
+<a class="zoom" href="/assets/NextITS_Workflow_Step1.webp">
+![NextITS Workflow - Step-1](/assets/NextITS_Workflow_Step1.webp)
+</a>  
+
+<a class="zoom" href="/assets/NextITS_Workflow_Step2.webp">
+![NextITS Workflow - Step-2](/assets/NextITS_Workflow_Step2.webp)
+</a>  
 
 ## Citation
 
