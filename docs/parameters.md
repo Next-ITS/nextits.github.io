@@ -248,19 +248,6 @@ NextITS provides a solution to evaluate index-switches using the
 ([Edgar 2018 DOI:`10.1101/400762`](https://www.biorxiv.org/content/10.1101/400762v1)), 
 which assigns an *ad hoc* score to measure the likelihood of tag-jump events.  
 
-### Miscellaneous parameters
-
-| Parameter            | Description                    | Default Value |
-| -------------------- | ------------------------------ | ------------- |
-| `--gzip_compression` | Compression level for GZIP ^1^ | "-7"          |
-
-^1^:  
-    To save disk space and potentially enhance data reading speed, 
-    NextITS compresses data using gzip. 
-    Adjust the balance between speed and compression ratio with the `--gzip_compression` parameter. 
-    Where `-1` is the fastest option (worst compression), and `-9` is slowest (best compression).  
-
-
 ## Step-2
 
 ### Required parameters
@@ -376,3 +363,17 @@ Supported Methods:
 **Please Note:** The default value for `--lulu_match` 
 in NextITS is set to a 95% similarity threshold. 
 This differs from the original LULU paper, where the default threshold is 84%.
+
+## Miscellaneous parameters
+
+| Parameter            | Description                                              | Default Value |
+| -------------------- | -------------------------------------------------------- | ------------- |
+| `--gzip_compression` | Compression level for GZIP ^1^                           | 7             |
+| `--storagemode`      | Adjusts how files are directed to the results folder ^2^ | "symlink"     |
+
+^1^:  
+    To save disk space and potentially enhance data reading speed, 
+    NextITS compresses data using gzip. 
+    Adjust the balance between speed and compression ratio with the `--gzip_compression` parameter. 
+    Where `-1` is the fastest option (worst compression), and `-9` is slowest (best compression).  
+
