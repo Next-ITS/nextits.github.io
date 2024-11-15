@@ -43,13 +43,13 @@ For **pre-demultiplexed** data (prepared using external tools):
 
 ### Demultiplexing
 
-| Parameter            | Description                                                                                                       | Default Value |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
-| `--demultiplexed`    | Whether input is multiplexed (`false`, single FASTQ file) or pre-demultiplexed (`true`, multiple FASTQ files) ^1^ | `false`       |
-| `--lima_minscore`    | Barcode score for demultiplexing ^2^                                                                              | 93            |
-| `--lima_barcodetype` | Barcoding scheme type (`single`, `dual`, `dual_symmetric`, `dual_asymmetric`) ^3^                                 | `dual`        |
-| `--lima_W`           | Window size for barcode lookup                                                                                    | 70            |
-| `--lima_minlen`      | Minimum sequence length after clipping barcodes                                                                   | 40            |
+| Parameter            | Description                                                                                                       | Default Value    |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `--demultiplexed`    | Whether input is multiplexed (`false`, single FASTQ file) or pre-demultiplexed (`true`, multiple FASTQ files) ^1^ | `false`          |
+| `--lima_minscore`    | Barcode score for demultiplexing ^2^                                                                              | 93               |
+| `--lima_barcodetype` | Barcoding scheme type (`single`, `dual`, `dual_symmetric`, `dual_asymmetric`) ^3^                                 | `dual_symmetric` |
+| `--lima_W`           | Window size for barcode lookup                                                                                    | 70               |
+| `--lima_minlen`      | Minimum sequence length after clipping barcodes                                                                   | 40               |
 
 ^1^:  
     By default, NextITS assumes you're providing multiplexed data, 
