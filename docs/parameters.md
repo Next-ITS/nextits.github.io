@@ -47,7 +47,7 @@ For **pre-demultiplexed** data (prepared using external tools):
 | -------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------- |
 | `--demultiplexed`    | Whether input is multiplexed (`false`, single FASTQ file) or pre-demultiplexed (`true`, multiple FASTQ files) ^1^ | `false`       |
 | `--lima_minscore`    | Barcode score for demultiplexing ^2^                                                                              | 93            |
-| `--lima_dualbarcode` | Dual-barcoding scheme with identical barcodes at both ends ^3^                                                    | `true`        |
+| `--lima_barcodetype` | Barcoding scheme type (`single`, `dual`, `dual_symmetric`, `dual_asymmetric`) ^3^                                 | `dual`        |
 | `--lima_W`           | Window size for barcode lookup                                                                                    | 70            |
 | `--lima_minlen`      | Minimum sequence length after clipping barcodes                                                                   | 40            |
 
@@ -69,9 +69,9 @@ For **pre-demultiplexed** data (prepared using external tools):
 
 ^3^:  
     Barcodes, which can also be referred to as adaptors, tags, indices, molecular identifiers (MIDs), come in various library designs. 
-    At present, NextITS supports two barcoding schemes: dual-barcoding (which is the default) and single-barcoding. 
-    For the dual-barcoding scheme, the amplicon should have *the same barcode* on both ends. 
-    An asymmetric design, where each side of the amplicon has a *different barcode pair*, is still in development.  
+    At present, NextITS supports 4 barcoding schemes: dual-barcoding (symmetric, assymetric, or mixture of combinatorial tags) and single-barcoding. 
+    For the dual-barcoding scheme, the amplicon should have the barcode on both ends of the amplicon. 
+    An asymmetric design, where each side of the amplicon has a *different barcode pair*, is also supported.  
     For a comprehensive understanding of barcode designs, please visit [https://lima.how/barcode-design.html](https://lima.how/barcode-design.html).  
 
 
