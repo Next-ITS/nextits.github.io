@@ -57,15 +57,23 @@ These scores depend on the barcode length.
 In NextITS, the default threshold for the minimum accepted score is provided with the expectation that barcodes have a length of 12 bp. 
 If your barcodes are shorter or you use barcodes of different lengths, you may need to adjust the `--lima_minscore` parameter.  
 
-Depending on the DNA library design, your amplicon sequences could be flanked by barcodes 
-either on both sides (dual barcodes) or just on one side (5' or 3').
-By default, NextITS expects dual-barcoding scheme (with identical barcodes at both ends). 
-If you use barcodes at a single end, please add the `--lima_dualbarcode false` parameter to your command.  
+Depending on the DNA library design, your amplicon sequences could be tagged with barcodes in different ways.
+NextITS supports multiple multiplexing strategies that can be specified with the `--lima_barcodetype` parameter:
+
+- `dual_symmetric` - identical barcodes at both ends
+- `dual_asymmetric` - different barcodes at 5' and 3' ends
+- `dual` - a mixture of symmetric and asymmetric barcodes (default)
+- `single` - barcodes only at one end
+
+For dual-barcoding schemes, provide barcode pairs in the FASTA file using the following format:
+
+```
+>RunID__Sample_01
+ACAACACTCCGA...TGCTAGCTAGCT
+>RunID__Sample2
+ACAAGTGCTGCT...GCATGCATGCAT
+```
 
 !!! info "Unique barcodes"
-    Make sure that the provided sample names and barcode sequences are unique!
-
-!!! example "Combinatorial sequence barcodes"
-    It is possible to tag multiplexed samples with a pair of **different barcodes** attached to the sides of the amplicon. 
-    Currently, there is no support for this asymmetric design in NextITS, but it will be added in a future release.
+    Make sure that the provided sample names and barcode sequences (or barcode combinations) are unique!
 
