@@ -60,9 +60,9 @@ If your barcodes are shorter or you use barcodes of different lengths, you may n
 Depending on the DNA library design, your amplicon sequences could be tagged with barcodes in different ways.
 NextITS supports multiple multiplexing strategies that can be specified with the `--lima_barcodetype` parameter:
 
-- `dual_symmetric` - identical barcodes at both ends
+- `dual_symmetric` - identical barcodes at both ends (default)
 - `dual_asymmetric` - different barcodes at 5' and 3' ends
-- `dual` - a mixture of symmetric and asymmetric barcodes (default)
+- `dual` - a mixture of symmetric and asymmetric barcodes
 - `single` - barcodes only at one end
 
 For dual-barcoding schemes, provide barcode pairs in the FASTA file using the following format:
